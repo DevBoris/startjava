@@ -1,25 +1,25 @@
 class Calculator {
     public static void main(String[] args) {
-        int firstVslue = 6;
-        int secondValue = 8;
-        char action = '^';
+        int firstNum = 6;
+        int secondNum = 8;
+        char operation = '^';
 
-        if(action == '*') {
-            System.out.println(firstVslue +""+ action +""+ secondValue + "=" + (firstVslue * secondValue));
-        } else if(action == '/') {
-            System.out.println(firstVslue +""+ action +""+ secondValue + "=" + (firstVslue / secondValue));
-        } else if(action == '+') {
-            System.out.println(firstVslue +""+ action +""+ secondValue + "=" + (firstVslue + secondValue));
-        } else if(action == '-') {
-            System.out.println(firstVslue +""+ action +""+ secondValue + "=" + (firstVslue - secondValue));
-        } else if(action == '%') {
-            System.out.println(firstVslue +""+ action +""+ secondValue + "=" + (firstVslue % secondValue));
-        } else if(action == '^') {
+        if(operation == '*') {
+            System.out.println(firstNum + "" + operation + "" + secondNum + "=" + (firstNum * secondNum));
+        } else if(operation == '/') {
+            System.out.println(firstNum + "" + operation + "" + secondNum + "=" + (firstNum / secondNum));
+        } else if(operation == '+') {
+            System.out.println(firstNum + "" + operation + "" + secondNum + "=" + (firstNum + secondNum));
+        } else if(operation == '-') {
+            System.out.println(firstNum + "" + operation + "" + secondNum + "=" + (firstNum - secondNum));
+        } else if(operation == '%') {
+            System.out.println(firstNum + "" + operation + "" + secondNum + "=" + (firstNum % secondNum));
+        } else if(operation == '^') {
             int result = 1;
-            for(int i = 0; i < secondValue; i++) {
-                result *= firstVslue;
+            for(int i = 0; i < secondNum; i++) {
+                result *= firstNum;
             }
-            System.out.println(result);
+            System.out.println(firstNum + "" + operation + "" + secondNum + "=" + result);
         }
     }
 }
