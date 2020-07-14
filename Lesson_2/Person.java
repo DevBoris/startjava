@@ -8,15 +8,19 @@ public class Person {
     void go() {
         System.out.println("по разному");
     }
+
     void sit() {
         System.out.println("stop");
     }
+
     void run() {
         System.out.println("по разному");
     }
+
     void speak() {
         System.out.println("по разному");
     }
+
     boolean learnJava() {
         return true;
     }
