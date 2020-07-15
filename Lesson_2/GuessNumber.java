@@ -4,7 +4,6 @@ import java.util.Random;
 public class GuessNumber {
     private Player player1;
     private Player player2;
-    private boolean isPlayer;
     private int randomNum;
     private Random random = new Random();
     Scanner scan = new Scanner(System.in);
@@ -19,30 +18,22 @@ public class GuessNumber {
         do {
             System.out.print(player1.getName() + " введите число, загаданное компьютером: ");
             player1.setNumber(scan.nextInt());
-            player1.setCondition(comparePlayers(player1));
-            compare(player1);
-            if(player2.isCondition()) {
+            if(!compare(player2)) {
                 System.out.print(player2.getName() + " введите число, загаданное компьютером: ");
                 player2.setNumber(scan.nextInt());
-                player2.setCondition(comparePlayers(player2));
-                compare(player2);
             }
-        } while(player1.isCondition());
+        } while(compare(player1));
     }
 
-    private void compare(Player player) {
+    private boolean compare(Player player) {
         if(player.getNumber() < randomNum) {
             System.out.println("Введенное вами число меньше того, что загадал компьютер. Число: " + randomNum);
+            return false;
         } else if(player.getNumber() > randomNum) {
             System.out.println("Введенное вами число больше того, что загадал компьютер. Число: " + randomNum);
-        } else {
+            return false;
+        } else if(player.getNumber() == randomNum) {
             System.out.println("Вы угадали. Число: " + randomNum);
-            player.setCondition(true);
-        }
-    }
-
-    private boolean comparePlayers(Player player) {
-        if(randomNum == player.getNumber()) {
             return true;
         } else {
             return false;
