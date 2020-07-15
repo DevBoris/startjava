@@ -8,12 +8,7 @@ public class Jaeger {
     private int strength;
     private int armor;
 
-    // constructors
-    public Jaeger() {
-    }
-
-    public Jaeger(String modelName, String mark, String origin,
-                  float height, float weight, int speed, int strength, int armor) {
+    public Jaeger(String modelName, String mark, String origin, float height, float weight, int speed, int strength, int armor) {
         this.modelName = modelName;
         this.mark = mark;
         this.origin = origin;
@@ -88,7 +83,6 @@ public class Jaeger {
     public void setArmor(int armor) {
         this.armor = armor;
     }
-
 
     // behaviors
     String drift() {

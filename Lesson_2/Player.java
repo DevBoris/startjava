@@ -1,9 +1,11 @@
 public class Player {
     private String name;
     private int number;
+    private boolean isCondition;
 
-    public Player(String name) {
+    public Player(String name, boolean isCondition) {
         this.name = name;
+        this.isCondition = isCondition;
     }
 
     public String getName() {
@@ -20,5 +22,13 @@ public class Player {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    public boolean isCondition() {
+        return isCondition;
+    }
+
+    public void setCondition(boolean condition) {
+        isCondition = condition;
     }
 }

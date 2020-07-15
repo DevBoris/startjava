@@ -1,8 +1,6 @@
 public class JaegerTest {
     public static void main(String[] args) {
         Jaeger jaeger1 = new Jaeger("Gipsy Danger", "Mark-3", "USA", 79.2f, 1.9f, 7, 8, 6);
-        Jaeger jaeger2 = new Jaeger("Cherno Alpha", "Mark-1", "Russia", 85.3f, 2.4f, 3, 10, 10);
-
         System.out.println("Первый Jaeger:");
         System.out.println("название модели: " + jaeger1.getModelName());
         System.out.println("модель: " + jaeger1.getMark());
@@ -15,6 +13,7 @@ public class JaegerTest {
         System.out.println("Возможности: " + jaeger1.drift() + ", " + jaeger1.move() + ", " +
                            jaeger1.scanKaiju() + ", " + jaeger1.useVortexCannon() + ".");
 
+        Jaeger jaeger2 = new Jaeger("Cherno Alpha", "Mark-1", "Russia", 85.3f, 2.4f, 3, 10, 10);
         System.out.println("\nВторой Jaeger: ");
         System.out.println("название модели: " + jaeger2.getModelName());
         System.out.println("модель: " + jaeger2.getMark());
