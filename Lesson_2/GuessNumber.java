@@ -17,10 +17,8 @@ public class GuessNumber {
         randomNum = random.nextInt(101);
         do {
             inputNumber(player1);
-            outputMassage(player1);
-            if(!compare(player1)) {
-                inputNumber(player2);
-                outputMassage(player2);
+            if(compare(player1)) {
+                break;
             }
         } while(compare(player1));
     }
@@ -30,21 +28,15 @@ public class GuessNumber {
         player.setNumber(scan.nextInt());
     }
 
-    private void outputMassage(Player player) {
+    private boolean compare(Player player) {
         if(player.getNumber() < randomNum) {
             System.out.println("Введенное вами число меньше того, что загадал компьютер. Число: " + randomNum);
         } else if(player.getNumber() > randomNum){
             System.out.println("Введенное вами число больше того, что загадал компьютер. Число: " + randomNum);
-        } else {
+        } else if(player.getNumber() == randomNum) {
             System.out.println("Вы угадали. Число: " + randomNum);
-        }
-    }
-
-    private boolean compare(Player player) {
-        if(player.getNumber() == randomNum) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 }
