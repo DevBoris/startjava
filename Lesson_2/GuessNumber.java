@@ -16,27 +16,28 @@ public class GuessNumber {
     public void play() {
         randomNum = random.nextInt(101);
         do {
-            System.out.print(player1.getName() + " введите число, загаданное компьютером: ");
-            player1.setNumber(scan.nextInt());
-            if(!compare(player2)) {
-                System.out.print(player2.getName() + " введите число, загаданное компьютером: ");
-                player2.setNumber(scan.nextInt());
-            }
-        } while(compare(player1));
+            inputNumber(player1);
+            compare(player1);
+            do {
+                inputNumber(player2);
+                compare(player2);
+            } while(player2.getNumber() != randomNum);
+        } while(player1.getNumber() != randomNum);
     }
 
     private boolean compare(Player player) {
         if(player.getNumber() < randomNum) {
             System.out.println("Введенное вами число меньше того, что загадал компьютер. Число: " + randomNum);
-            return false;
         } else if(player.getNumber() > randomNum) {
             System.out.println("Введенное вами число больше того, что загадал компьютер. Число: " + randomNum);
-            return false;
-        } else if(player.getNumber() == randomNum) {
+        } else {
             System.out.println("Вы угадали. Число: " + randomNum);
             return true;
-        } else {
-            return false;
         }
+        return false;
+    }
+    private void inputNumber(Player player) {
+        System.out.print(player1.getName() + " введите число, загаданное компьютером: ");
+        player1.setNumber(scan.nextInt());
     }
 }
