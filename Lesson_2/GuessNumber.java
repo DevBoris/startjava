@@ -17,7 +17,8 @@ public class GuessNumber {
         randomNum = random.nextInt(101);
         do {
             inputNumber(player1);
-            if(compare(player1)) {
+            if(compare(player2)) {
+                inputNumber(player2);
                 break;
             }
         } while(compare(player1));
