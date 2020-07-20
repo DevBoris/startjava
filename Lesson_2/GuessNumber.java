@@ -19,12 +19,17 @@ public class GuessNumber {
             inputNumber(player1);
             if(compare(player1)) {
                 break;
+            } else {
+                inputNumber(player2);
+                if(compare(player2)) {
+                    break;
+                }
             }
         } while(compare(player1));
     }
 
     private void inputNumber(Player player) {
-        System.out.print(player1.getName() + " введите число, загаданное компьютером: ");
+        System.out.print(player.getName() + " введите число, загаданное компьютером: ");
         player.setNumber(scan.nextInt());
     }
 
