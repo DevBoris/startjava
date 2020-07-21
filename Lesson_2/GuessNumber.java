@@ -19,13 +19,9 @@ public class GuessNumber {
             inputNumber(player1);
             if(compare(player1)) {
                 break;
-            } else {
-                inputNumber(player2);
-                if(compare(player2)) {
-                    break;
-                }
             }
-        } while(compare(player1));
+            inputNumber(player2);
+        } while(!compare(player2));
     }
 
     private void inputNumber(Player player) {
