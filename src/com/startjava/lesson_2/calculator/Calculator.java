@@ -1,9 +1,10 @@
+package com.startjava.lesson_2.calculator;
+
 public class Calculator {
     private int firstNum;
     private int secondNum;
     private char sign;
 
-    // getters/setters
     public int getFirstNum() {
         return firstNum;
     }

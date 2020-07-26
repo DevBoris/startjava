@@ -1,3 +1,5 @@
+package com.startjava.lesson_2.robot;
+
 public class Jaeger {
     private String modelName;
     private String mark;
@@ -86,18 +88,18 @@ public class Jaeger {
 
     // behaviors
     String drift() {
-        return "РјРѕР¶РµС‚ РІС…РѕРґРёС‚СЊ РІ РґСЂРёС„С‚";
+        return "может входить в дрифт";
     }
 
     String move() {
-        return "РјРѕР¶РµС‚ РїРµСЂРµРґРІРёРіР°С‚СЊСЃСЏ";
+        return "может передвигаться";
     }
 
     String scanKaiju() {
-        return "СЃРєР°РЅРёСЂРѕРІР°РЅРёРµ РѕР±СЉРµРєС‚РѕРІ";
+        return "сканирование объектов";
     }
 
     String useVortexCannon() {
-        return "РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ Vortex Cannon";
+        return "Используется Vortex Cannon";
     }
 }

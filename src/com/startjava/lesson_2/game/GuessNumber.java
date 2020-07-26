@@ -1,3 +1,4 @@
+package com.startjava.lesson_2.game;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -25,17 +26,17 @@ public class GuessNumber {
     }
 
     private void inputNumber(Player player) {
-        System.out.print(player.getName() + " РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ, Р·Р°РіР°РґР°РЅРЅРѕРµ РєРѕРјРїСЊСЋС‚РµСЂРѕРј: ");
+        System.out.print(player.getName() + " введите число, загаданное компьютером: ");
         player.setNumber(scan.nextInt());
     }
 
     private boolean compare(Player player) {
         if(player.getNumber() < randomNum) {
-            System.out.println("Р’РІРµРґРµРЅРЅРѕРµ РІР°РјРё С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ С‚РѕРіРѕ, С‡С‚Рѕ Р·Р°РіР°РґР°Р» РєРѕРјРїСЊСЋС‚РµСЂ. Р§РёСЃР»Рѕ: " + randomNum);
+            System.out.println("Введенное вами число меньше того, что загадал компьютер. Число: " + randomNum);
         } else if(player.getNumber() > randomNum){
-            System.out.println("Р’РІРµРґРµРЅРЅРѕРµ РІР°РјРё С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ С‚РѕРіРѕ, С‡С‚Рѕ Р·Р°РіР°РґР°Р» РєРѕРјРїСЊСЋС‚РµСЂ. Р§РёСЃР»Рѕ: " + randomNum);
+            System.out.println("Введенное вами число больше того, что загадал компьютер. Число: " + randomNum);
         } else if(player.getNumber() == randomNum) {
-            System.out.println("Р’С‹ СѓРіР°РґР°Р»Рё. Р§РёСЃР»Рѕ: " + randomNum);
+            System.out.println("Вы угадали. Число: " + randomNum);
             return true;
         }
         return false;

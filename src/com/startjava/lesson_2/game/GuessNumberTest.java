@@ -1,20 +1,21 @@
+package com.startjava.lesson_2.game;
 import java.util.Scanner;
 
 public class GuessNumberTest {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ РёРіСЂРѕРєР° в„– 1: ");
+        System.out.println("Введите имя игрока № 1: ");
         Player player1 = new Player(scan.nextLine());
-        System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ РёРіСЂРѕРєР° в„– 2: ");
+        System.out.println("Введите имя игрока № 2: ");
         Player player2 = new Player(scan.nextLine());
         GuessNumber game = new GuessNumber(player1, player2);
         String choice;
         do {
             game.play();
             do {
-                System.out.println("РҐРѕС‚РёС‚Рµ РїСЂРѕРґРѕР»Р¶РёС‚СЊ? [РґР°/РЅРµС‚]: ");
+                System.out.println("Хотите продолжить? [да/нет]: ");
                 choice = scan.next();
-            } while(!choice.equals("РґР°") && !choice.equals("РЅРµС‚"));
-        } while(choice.equals("РґР°"));
+            } while(!choice.equals("да") && !choice.equals("нет"));
+        } while(choice.equals("да"));
     }
 }
