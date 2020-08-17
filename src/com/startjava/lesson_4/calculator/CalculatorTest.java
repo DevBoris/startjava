@@ -1,4 +1,5 @@
 package com.startjava.lesson_4.calculator;
+
 import java.util.Scanner;
 
 public class CalculatorTest {
@@ -10,7 +11,7 @@ public class CalculatorTest {
             Scanner scan = new Scanner(System.in);
             System.out.print("Введите математическое выражение, например 2 ^ 10 : ");
             calculator.split(scan.nextLine());
-            calculator.calculate();
+            System.out.println("Результат вычисления: " + calculator.calculate());
             do {
                 System.out.print("Хотите продолжить? [да/нет]: ");
                 choice = scan.next();

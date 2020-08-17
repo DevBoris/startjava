@@ -30,36 +30,29 @@ public class Calculator {
     }
 
     public void split(String expression) {
-        String[] arrayOfExpression = expression.split(" ", 3);
-        firstNum = Integer.parseInt(arrayOfExpression[0]);
-        sign = arrayOfExpression[1].charAt(0);
-        secondNum = Integer.parseInt(arrayOfExpression[2]);
+        String[] fillExpression = expression.split(" ", 3);
+        firstNum = Integer.parseInt(fillExpression[0]);
+        sign = fillExpression[1].charAt(0);
+        secondNum = Integer.parseInt(fillExpression[2]);
     }
 
-    public void calculate() {
-        int result;
+    public int calculate() {
         switch(sign) {
             case '*' :
-                System.out.println("Результат вычисления: " + Math.multiplyExact(firstNum, secondNum));
-                break;
+                return Math.multiplyExact(firstNum, secondNum);
             case '/' :
-                System.out.println("Результат вычисления: " + Math.floorDiv(firstNum, secondNum));
-                break;
+                return Math.floorDiv(firstNum, secondNum);
             case '+' :
-                System.out.println("Результат вычисления: " + Math.addExact(firstNum, secondNum));
-                break;
+                return Math.addExact(firstNum, secondNum);
             case '-' :
-                System.out.println("Результат вычисления: " + Math.subtractExact(firstNum, secondNum));
-                break;
+                return Math.subtractExact(firstNum, secondNum);
             case '%' :
-                System.out.println("Результат вычисления: " + Math.floorMod(firstNum, secondNum));
-                break;
+                return Math.floorMod(firstNum, secondNum);
             case '^' :
-                System.out.println("Результат вычисления: " + (int)Math.pow(firstNum, secondNum));
-                break;
+                return  (int) Math.pow(firstNum, secondNum);
             default :
                 System.out.println("Операция над числами не поддерживается.");
-                break;
+                return 0;
         }
     }
 }
