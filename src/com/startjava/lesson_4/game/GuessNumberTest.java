@@ -1,4 +1,4 @@
-package com.startjava.lesson_2.game;
+package com.startjava.lesson_4.game;
 import java.util.Scanner;
 
 public class GuessNumberTest {
@@ -11,7 +11,7 @@ public class GuessNumberTest {
         GuessNumber game = new GuessNumber(player1, player2);
         String choice;
         do {
-            game.play();
+            
             do {
                 System.out.println("Хотите продолжить? [да/нет]: ");
                 choice = scan.next();
