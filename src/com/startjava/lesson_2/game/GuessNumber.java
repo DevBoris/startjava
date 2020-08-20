@@ -1,3 +1,4 @@
+
 package com.startjava.lesson_2.game;
 import java.util.Scanner;
 import java.util.Random;
@@ -18,7 +19,7 @@ public class GuessNumber {
         randomNum = random.nextInt(101);
         do {
             inputNumber(player1);
-            if(compare(player1)) {
+           if(compare(player1)) {
                 break;
             }
             inputNumber(player2);
