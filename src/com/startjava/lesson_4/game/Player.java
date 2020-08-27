@@ -19,19 +19,16 @@ public class Player {
         this.name = name;
     }
 
-    public void nextAttempt() {
-        attempt++;
-    }
-
     public int getAttempt() {
         return attempt;
     }
 
     public void setGuessNumber(int number) {
+        attempt++;
         guessNums[attempt - 1] = number;
     }
 
-    public int getGuessNumber() {
+    public int getLastNumber() {
         return guessNums[attempt - 1];
     }
 
