@@ -19,12 +19,12 @@ public class Player {
         this.name = name;
     }
 
-    public int getAttempt() {
-        return attempt;
+    public void nextAttempt() {
+        attempt++;
     }
 
-    public void setAttempt(int attempt) {
-        this.attempt = attempt;
+    public int getAttempt() {
+        return attempt;
     }
 
     public void setGuessNumber(int number) {
